@@ -1,0 +1,31 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0", 
+    "parameters":{},
+    "resources": [        
+        {
+            "name": "Microsoft.CustomScriptExtension",
+            "apiVersion": "2015-01-01",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "https://catalogartifact.azureedge.net/publicartifacts/Microsoft.CustomScriptExtension-arm-2.0.58/MainTemplate.json"
+                },
+                "parameters": {
+                    "fileUris": {
+                        "value": "https://gethustoragefdgdf.blob.core.windows.net/script/winrm.ps1?sp=r&st=2023-12-29T05:19:12Z&se=2024-03-28T05:19:12Z&sv=2022-11-02&sr=b&sig=VCnH5Pf2pMaK2LLw2BMH%2FHSzqqyZ1R6Bk8SUTJjE3To%3D"
+                    },
+                    "vmName": {
+                        "value": "example-machine"
+                    },
+                    "location": {
+                        "value": "eastus"
+                    }
+                }
+            }
+            
+        }
+    ]
+    
+}
